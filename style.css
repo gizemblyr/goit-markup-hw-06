@@ -1,0 +1,188 @@
+/* Genel Reset ve Temel Stillendirme (Prettier ile biçimlendirilmiş) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: rgba(46, 47, 66, 1);
+  list-style-type: none;
+}
+
+img {
+  display: block;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Header ve Navigasyon */
+.header {
+  border-bottom: 1px solid #e7e9fc;
+  padding: 24px 0;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-right {
+  text-transform: uppercase;
+  color: #4d5ae5;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 3px;
+  line-height: 21px;
+}
+
+/* Masaüstü menü: Mobilde gizle */
+.ul-items {
+  display: none;
+}
+
+/* Mobil Menü Toggle Butonu */
+.mobile-menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobil Menü (C4: Tam ekran, C5: Başlangıçta gizli) */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  transform: translateX(-100%);
+  transition: transform 250ms ease-in-out;
+  z-index: 1000;
+  /* C7: Gereksiz tekrarlardan kaçınmak için sade tanım */
+}
+
+.mobile-menu.is-open {
+  transform: translateX(0);
+}
+
+.mobile-menu-items {
+  padding: 2rem;
+  list-style: none;
+}
+
+.mobile-menu-item {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #2e2f42;
+}
+
+/* Mobil için içerik stilleri */
+.section {
+  padding: 60px 0;
+}
+
+.main-title {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Button */
+.button {
+  display: block;
+  margin: 0 auto;
+  min-width: 169px;
+  height: 56px;
+  border: none;
+  background-color: #4d5ae5;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  transition: background-color 250ms ease-in-out;
+}
+
+.button:hover {
+  background-color: rgba(64, 75, 191, 1);
+}
+
+/* Footer */
+.footer {
+  padding: 60px 0;
+  background-color: #2e2f42;
+}
+
+.footer-logo-right,
+.footer-logo-left {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+
+.footer-logo-right {
+  color: #4d5ae5;
+}
+
+.footer-logo-left {
+  color: #fff;
+}
+
+.footer-text {
+  color: #f4f4fd;
+  font-weight: 400;
+  margin-top: 16px;
+}
+
+/* Responsive Görüntüler: x1 ve x2 destek (B3, B4) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .section-container-first {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(./images/people-office@2x.jpg);
+  }
+}
+
+/* MEDYA SORGU: 768px ve üzeri (Tablet) */
+@media (min-width: 768px) {
+  /* Masaüstü menü görünür, mobil toggle gizli */
+  .mobile-menu-toggle {
+    display: none;
+  }
+
+  .ul-items {
+    display: flex;
+    gap: 40px;
+  }
+
+  /* Başlık ve container */
+  .main-title {
+    font-size: 42px;
+  }
+}
+
+/* MEDYA SORGU: 1158px ve üzeri (Masaüstü) */
+@media (min-width: 1158px) {
+  .container {
+    width: 1158px;
+  }
+
+  .container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Geniş ekranlara özgü diğer düzenlemeler burada eklenebilir */
+}

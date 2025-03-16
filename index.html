@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- B1: Viewport meta etiketi -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebStudio</title>
+    <!-- A4: Modern-normalize aktif -->
+    <link rel="stylesheet" href="path/to/modern-normalize.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container container-header">
+        <nav class="nav-menu">
+          <a href="./index.html" class="logo-right">
+            Web<span class="logo-left">Studio</span>
+          </a>
+          <!-- Mobil menü toggle butonu (C1, C2) -->
+          <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+            <svg width="24" height="24" class="icon icon-menu">
+              <use href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
+          <!-- Masaüstü menü; mobilde gizli -->
+          <ul class="ul-items">
+            <li><a href="/" class="nav-item selected-nav-item">Studio</a></li>
+            <li><a href="/" class="nav-item">Portfolio</a></li>
+            <li><a href="/" class="nav-item">Contacts</a></li>
+          </ul>
+        </nav>
+        <address>
+          <ul class="header-address">
+            <li>
+              <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+            </li>
+            <li>
+              <a href="tel:+110001111111">+11 (000) 111-11-11</a>
+            </li>
+          </ul>
+        </address>
+      </div>
+      <!-- C3, C4, C5: Mobil menü yapısı -->
+      <div class="mobile-menu">
+        <ul class="mobile-menu-items">
+          <li>
+            <a href="/" class="mobile-menu-item">Studio</a>
+          </li>
+          <li>
+            <a href="/" class="mobile-menu-item">Portfolio</a>
+          </li>
+          <li>
+            <a href="/" class="mobile-menu-item">Contacts</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <!-- A3: Tüm içerik mockup'tan alınmış varsayılıyor. -->
+      <!-- Örneğin: Ana bölüm, hizmetler, portföy vs. -->
+      <section class="section section-container-first">
+        <div class="container">
+          <h1 class="main-title">Effective Solutions for Your Business</h1>
+          <button type="button" class="button">Order Service</button>
+        </div>
+      </section>
+      <!-- Diğer bölümler... -->
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div>
+          <a href="./index.html" class="footer-logo-right">
+            Web<span class="footer-logo-left">Studio</span>
+          </a>
+          <p class="footer-text">
+            Increase the flow of customers and sales for your business with
+            digital marketing &amp; growth solutions.
+          </p>
+        </div>
+        <div>
+          <p class="footer-social-media">Social media</p>
+          <ul class="footer-social-media-list">
+            <li class="footer-social-media-list-item">
+              <a href="#" class="footer-social-media-list-item-link">
+                <svg width="24" height="24" class="footer-svg">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-social-media-list-item">
+              <a href="#" class="footer-social-media-list-item-link">
+                <svg width="24" height="24" class="footer-svg">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-social-media-list-item">
+              <a href="#" class="footer-social-media-list-item-link">
+                <svg width="24" height="24" class="footer-svg">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-social-media-list-item">
+              <a href="#" class="footer-social-media-list-item-link">
+                <svg width="24" height="24" class="footer-svg">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="subscribe-container">
+          <p class="subscribe">Subscribe</p>
+          <form class="form-subscribe">
+            <label for="footer-email-input" class="label-subscription">
+              <input type="email" id="footer-email-input"
+              class="footer-email-input" name="footer-email-input"
+              placeholder="E-mail" style="width: 100%;"
+              <!-- A1: Genişlik için inline örneği (gerekirse) -->
+              />
+            </label>
+            <button type="submit" class="button-subscribe">
+              Subscribe
+              <svg width="24" height="24" class="icon-send">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobil menü toggle işlevselliği -->
+    <script>
+      const menuToggle = document.querySelector(".mobile-menu-toggle");
+      const mobileMenu = document.querySelector(".mobile-menu");
+
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("is-open"); // C6: is-open eklenince menü görünür
+      });
+    </script>
+  </body>
+</html>
